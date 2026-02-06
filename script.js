@@ -36,17 +36,17 @@ function getweather() {
 
         <div class="image">
           <div class="feel-like-image">
-            <img src="feel-like.png">
+            <img src="feel-like.png alt="feel like">
             <strong>Feels like ${data.main.feels_like}°C</strong>
           </div>
 
           <div class="humidity-image">
-            <img src="https://cdn-icons-png.flaticon.com/512/414/414974.png" alt="humidity icon">
+            <img src="humidity.png alt="humidity icon">
             <strong>${data.main.humidity}%</strong>
           </div>
 
           <div class="wind-image">
-            <img src="wind.png">
+            <img src="wind.png alt"wind icon">
             <strong>
               ${isNaN(data.wind?.speed) ? "" : Math.round(data.wind.speed * 3.6) + " km/h"}
             </strong>
@@ -62,6 +62,7 @@ function getweather() {
         `<p style="color:red;">Error fetching data</p>`;
     });
 }
+
 
 
 
