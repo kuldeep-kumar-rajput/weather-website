@@ -36,32 +36,30 @@ function getweather() {
 
         <div class="image">
           <div class="feel-like-image">
-            <img src="feel-like.png alt="feel like">
+            <img src="feel-like.png">
             <strong>Feels like ${data.main.feels_like}°C</strong>
           </div>
 
           <div class="humidity-image">
-            <img src="humidity.png alt="humidity icon">
+            <img src="humidity.png">
             <strong>${data.main.humidity}%</strong>
           </div>
 
           <div class="wind-image">
-            <img src="wind.png alt"wind icon">
+            <img src="wind.png ">
             <strong>
               ${isNaN(data.wind?.speed) ? "" : Math.round(data.wind.speed * 3.6) + " km/h"}
             </strong>
           </div>
         </div>
       `;
-
       document.getElementById("weather-result").innerHTML = weatherInfo;
     })
     .catch((error) => {
       console.log(error);
-      document.getElementById("weather-result").innerHTML =
-        `<p style="color:red;">Error fetching data</p>`;
     });
 }
+
 
 
 
